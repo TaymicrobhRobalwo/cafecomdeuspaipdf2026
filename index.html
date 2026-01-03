@@ -8,6 +8,51 @@
     <meta name="description"
         content="Garanta agora o Café com Deus Pai 2026 em PDF. Acesso imediato no e-mail. Oferta por R$ 19,90. Página oficial." />
 
+    <script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+
+    <script>
+(function() {
+  const params = window.location.search;
+
+  if (!params) return;
+
+  document.addEventListener("click", function(e) {
+    let el = e.target.closest("a, button");
+    if (!el) return;
+
+    // Caso seja <a>
+    if (el.tagName === "A" && el.href) {
+      if (el.href.indexOf("?") === -1) {
+        el.href += params;
+      } else {
+        el.href += "&" + params.substring(1);
+      }
+    }
+
+    // Caso seja botão com data-link
+    if (el.tagName === "BUTTON" && el.dataset.link) {
+      let link = el.dataset.link;
+
+      if (link.indexOf("?") === -1) {
+        link += params;
+      } else {
+        link += "&" + params.substring(1);
+      }
+
+      window.location.href = link;
+      e.preventDefault();
+    }
+  });
+})();
+</script>
+
+    
     <style>
         :root {
             --bg: #0f0c0a;
@@ -2043,5 +2088,6 @@
         })();
     </script>
 </body>
+
 
 </html>
